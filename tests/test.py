@@ -6,7 +6,8 @@ from torch.autograd import Variable, gradcheck
 try:
     import tensorflow as tf
     import tensorflow.contrib.slim as slim
-except:
+except Exception:
+    print(Exception)
     print("Unexpected error:", sys.exc_info()[0])
     tf = None
 
